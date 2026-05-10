@@ -34,5 +34,5 @@ jobs:
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/innovatech-back:latest
             sudo docker stop back-app || true
             sudo docker rm back-app || true
-            # Ejecución con la contraseña y todas las variables de entorno
-            sudo docker run -d --name back-app -p 3000:3000 -e PORT=3000 -e DB_HOST=10.0.2.241 -e DB_USER=root -e DB_PASSWORD=Caltias8 -e DB_NAME=proyecto_db -e DB_PORT=3306 ${{ secrets.DOCKER_USERNAME }}/innovatech-back:latest
+            # MAGIA INGE SENIOR: Le agregamos --restart always por si se tropieza
+            sudo docker run -d --name back-app -p 3000:3000 --restart always -e PORT=3000 -e DB_HOST=10.0.2.241 -e DB_USER=root -e DB_PASSWORD=Caltias8 -e DB_NAME=proyecto_db -e DB_PORT=3306 ${{ secrets.DOCKER_USERNAME }}/innovatech-back:latest
