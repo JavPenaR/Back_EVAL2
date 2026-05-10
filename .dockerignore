@@ -1,0 +1,22 @@
+# Carpetas de compilación de Java y Maven
+target/
+*.jar
+*.war
+
+# Carpetas de configuración de IDEs (VS Code, IntelliJ, Eclipse)
+.mvn/
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+bin/
+
+# Archivos de Git y sistema
+.git
+.gitignore
+.env
+Dockerfile
+.dockerignore
+.github
