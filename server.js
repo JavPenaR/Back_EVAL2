@@ -33,7 +33,7 @@ dbConnection.connect((err) => {
 // Ruta de prueba para verificar que el servidor funciona
 app.get('/', (req, res) => {
     res.json({ 
-        message: 'API del proyecto funcionando correctamente',
+        message: 'API del proyecto del equipo Caltías, modificado por Matías Suazo, funcionando correctamente',
         status: 'active',
         timestamp: new Date().toISOString()
     });
@@ -49,7 +49,13 @@ app.get('/api/usuarios', (req, res) => {
             res.status(500).json({ error: 'Error al obtener usuarios' });
             return;
         }
-        res.json(results);
+        res.json(results.map(user => ({
+
+  ...user,
+
+  nombre: user.nombre ? user.nombre.slice(0, 5) : ''
+
+})));
     });
 });
 
@@ -70,7 +76,7 @@ app.post('/api/usuarios', (req, res) => {
             return;
         }
         res.status(201).json({
-            message: 'Usuario creado exitosamente',
+            message: 'Usuario creado exitosamente por Matías Suazo Gallardo para el equipo Caltías!',
             id: result.insertId,
             nombre,
             email,
