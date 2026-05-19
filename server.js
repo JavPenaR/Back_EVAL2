@@ -70,7 +70,7 @@ app.post('/api/usuarios', (req, res) => {
             return;
         }
         res.status(201).json({
-            message: 'Usuario creado exitosamente por Matías Suazo Gallardo!',
+            message: 'Usuario creado exitosamente por Matías Suazo Gallardo para el equipo Caltías!',
             id: result.insertId,
             nombre,
             email,
