@@ -33,7 +33,7 @@ dbConnection.connect((err) => {
 // Ruta de prueba para verificar que el servidor funciona
 app.get('/', (req, res) => {
     res.json({ 
-        message: 'API del proyecto funcionando correctamente',
+        message: 'API del proyecto del equipo Caltías, modificado por Matías Suazo, funcionando correctamente',
         status: 'active',
         timestamp: new Date().toISOString()
     });
